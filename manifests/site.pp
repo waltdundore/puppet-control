@@ -8,7 +8,9 @@ class { selinux:
   type => 'targeted',
 }
 
-
+package { 'git':
+  ensure => installed,
+}
 
 include sudo
 sudo::conf { 'puppet_puppet':
