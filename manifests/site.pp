@@ -28,8 +28,6 @@ sudo::conf { 'vagrant':
 #################
 # docker config #
 #################
-include 'docker'
-
 class { 'docker':
   docker_users => ['wdundore'],
 }
@@ -64,8 +62,4 @@ Mount {
 
 Package {
   allow_virtual => true,
-}
-
-package { 'git':
-  ensure => installed,
 }
