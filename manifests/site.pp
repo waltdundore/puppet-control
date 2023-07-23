@@ -1,5 +1,5 @@
 node default {
-  include ::roles::standalone
+#  include ::roles::standalone
 }
 
 
@@ -7,6 +7,17 @@ class { selinux:
   mode => 'permissive',
   type => 'targeted',
 }
+
+
+
+include sudo
+sudo::conf { 'puppet_puppet':
+    content  => 'puppet ALL=NOPASSWD: /usr/bin/puppet, /usr/local/bin/puppet',
+  }
+sudo::conf { 'vagrant':
+  content => "Defaults:vagrant !requiretty\nvagrant ALL=(ALL) NOPASSWD: ALL",
+}
+
 
 # default path for commands
 Exec { path => '/usr/bin:/bin:/usr/sbin:/sbin' }
