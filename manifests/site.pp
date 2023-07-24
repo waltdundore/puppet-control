@@ -28,9 +28,9 @@ sudo::conf { 'vagrant':
 #################
 # docker config #
 #################
-class { 'docker':
-  docker_users => ['wdundore'],
-}
+#class { 'docker':
+#  docker_users => ['wdundore'],
+#}
 
 
 
