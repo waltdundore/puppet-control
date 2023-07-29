@@ -1,7 +1,7 @@
 forge "https://forge.puppet.com"
 
-mod 'puppetlabs/stdlib', '4.25.0'
-mod 'saz/sudo', '3.1.0'
+mod 'puppetlabs-stdlib', '9.2.0'
+mod 'saz/sudo', '8.0.0'
 
 # Included only to resolve dependencies
 
