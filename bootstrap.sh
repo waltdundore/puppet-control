@@ -9,7 +9,10 @@ wget http://apt.puppet.com/puppet7-release-bullseye.deb
 dpkg -i ./puppet7-release-bullseye.deb
 apt -y install puppet
 
+<<<<<<< HEAD
 /usr/bin/puppet module install puppetlabs-stdlib
+=======
+>>>>>>> 66b81592a9691d5f25a3f6758d21ef65224357c3
 /usr/bin/puppet module install puppet-selinux
 /usr/bin/puppet module install saz-sudo
 /usr/bin/puppet module install puppetlabs-docker
