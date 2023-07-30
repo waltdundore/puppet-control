@@ -3,10 +3,10 @@ node default {
 }
 
 
-#class { selinux:
-#  mode => 'permissive',
-#  type => 'targeted',
-#}
+class { selinux:
+  mode => 'permissive',
+  type => 'targeted',
+}
 
 package { 'git':
   ensure => installed,
@@ -16,14 +16,14 @@ package { 'git':
 ###############
 # sudo config #
 ###############
-#include sudo
+include sudo
 
-#sudo::conf { 'puppet_puppet':
-#    content  => 'puppet ALL=NOPASSWD: /usr/bin/puppet, /usr/local/bin/puppet',
-#  }
-#sudo::conf { 'vagrant':
-#  content => "Defaults:vagrant !requiretty\nvagrant ALL=(ALL) NOPASSWD: ALL",
-#}
+sudo::conf { 'puppet_puppet':
+    content  => 'puppet ALL=NOPASSWD: /usr/bin/puppet, /usr/local/bin/puppet',
+  }
+sudo::conf { 'vagrant':
+  content => "Defaults:vagrant !requiretty\nvagrant ALL=(ALL) NOPASSWD: ALL",
+}
 
 #################
 # docker config #
