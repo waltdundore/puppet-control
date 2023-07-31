@@ -2,11 +2,12 @@ node default {
 #  include ::roles::standalone
 }
 
+include selinux
 
-#class { selinux:
-#  mode => 'permissive',
-#  type => 'targeted',
-#}
+class { selinux:
+  mode => 'permissive',
+  type => 'targeted',
+}
 
 package { 'git':
   ensure => installed,
