@@ -1,0 +1,4 @@
+:sources:
+  :eupathdb:
+    remote: '/vagrant/scratch/puppet-control'
+    basedir: '/etc/puppetlabs/code/environments'
