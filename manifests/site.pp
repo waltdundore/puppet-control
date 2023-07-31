@@ -2,7 +2,7 @@ node default {
 #  include ::roles::standalone
 }
 
-include selinux
+#include selinux
 
 class { selinux:
   mode => 'permissive',
