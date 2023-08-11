@@ -9,9 +9,93 @@ class { selinux:
   type => 'targeted',
 }
 
+include epel
+
 package { 'git':
   ensure => installed,
 }
+
+package { 'htop':
+  ensure => installed,
+}
+
+package { 'iperf3':
+  ensure => installed,
+}
+
+package { 'nmap':
+  ensure => installed,
+}
+
+package { 'sshuttle':
+  ensure => installed,
+}
+
+package { 'tmux':
+  ensure => installed,
+}
+
+
+package { 'wireshark':
+  ensure => installed,
+}
+
+
+#### Libvirt Packages ########
+
+package { 'libvirt':
+  ensure => installed,
+}
+
+package { 'virt-install':
+  ensure => installed,
+}
+
+package { 'libvirt-client':
+  ensure => installed,
+}
+
+package { 'qemu-kvm':
+  ensure => installed,
+}
+
+package { 'qemu-img':
+  ensure => installed,
+}
+
+package { 'libguestfs-tools':
+  ensure => installed,
+}
+
+service { 'libvirtd':
+  ensure => running,
+}
+
+package { 'cockpit':
+  ensure => installed,
+}
+
+package { 'cockpit-machines':
+  ensure => installed,
+}
+
+package { 'cockpit-selinux':
+  ensure => installed,
+}
+
+service { 'cockpit':
+  ensure => running,
+}
+
+package { 'firefox':
+  ensure => 'purged',
+}
+
+package { 'chromium':
+  ensure => installed,
+}
+
+
 
 
 ###############
