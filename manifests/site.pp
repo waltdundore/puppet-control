@@ -91,12 +91,6 @@ package { 'firefox':
   ensure => 'purged',
 }
 
-package { 'chromium':
-  ensure => installed,
-}
-
-
-
 
 ###############
 # sudo config #
