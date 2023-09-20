@@ -95,6 +95,7 @@ package { 'firefox':
 }
 
 
+
 ###############
 # sudo config #
 ###############
