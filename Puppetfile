@@ -7,6 +7,11 @@ mod 'puppetlabs-docker', '9.1.0'
 mod 'puppet-epel', '5.0.0'
 
 
+mod 'profiles',
+  :git => "git@github.com:waltdundore/puppet-profiles.git",
+  :branch => :control_branch,
+  :default_branch => 'production'
+
 mod 'puppet-code',
      :git    => 'git@github.com:waltdundore/puppet-control.git',
      :branch => :control_branch,
