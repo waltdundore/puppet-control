@@ -61,7 +61,7 @@ service { 'cockpit':
 include sudo
 
 sudo::conf { 'puppet_puppet':
-    content  => 'puppet ALL=NOPASSWD: /usr/bin/puppet, /usr/local/bin/puppet',
+    content  => 'puppet ALL=NOPASSWD: /usr/opt/puppetlabs/bin/puppet, /usr/local/opt/puppetlabs/bin/puppet',
   }
 
 # default permissions of 644 for files and 755 for directories

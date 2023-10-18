@@ -41,13 +41,13 @@ Cmnd_Alias VAGRANT_NFSD_APPLY = /usr/sbin/exportfs -ar
 %vagrant ALL=(root) NOPASSWD: VAGRANT_EXPORTS_CHOWN, VAGRANT_EXPORTS_MV, VAGRANT_NFSD_CHECK, VAGRANT_NFSD_START, VAGRANT_NFSD_APPL
 EOF
 
-/bin/puppet module install puppetlabs-stdlib --version 9.3.0
-/bin/puppet module install puppet-selinux --version 4.0.0
-/bin/puppet module install saz-sudo --version 8.0.0
-/bin/puppet module install puppetlabs-docker --version 9.1.0
-/bin/puppet module install puppet-epel --version 5.0.0
+/opt/puppetlabs/bin/puppet module install puppetlabs-stdlib --version 9.3.0
+/opt/puppetlabs/bin/puppet module install puppet-selinux --version 4.0.0
+/opt/puppetlabs/bin/puppet module install saz-sudo --version 8.0.0
+/opt/puppetlabs/bin/puppet module install puppetlabs-docker --version 9.1.0
+/opt/puppetlabs/bin/puppet module install puppet-epel --version 5.0.0
 
 
 curl -o ~/site.pp https://raw.githubusercontent.com/waltdundore/puppet-control/production/manifests/site.pp
-/bin/puppet apply ~/site.pp
+/opt/puppetlabs/bin/puppet apply ~/site.pp
 rm -f ~/site.pp
