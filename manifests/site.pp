@@ -1,3 +1,4 @@
+#testing
 node default {
 #  include ::roles::standalone
 }
