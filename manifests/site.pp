@@ -9,10 +9,7 @@ class { selinux:
   type => 'targeted',
 }
 
-case $facts['os']['name'] {
-    'RedHat','CentOS','Rocky':  {
-         include epel
-    }
+include epel
 
 package { 'git':
   ensure => installed,
