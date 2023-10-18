@@ -10,7 +10,7 @@ class { selinux:
 }
 
 case $facts['os']['name'] {
-    'RedHat', 'CentOS', 'Rocky':  {
+    'RedHat','CentOS','Rocky':  {
          include epel
     }
 
