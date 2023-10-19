@@ -5,7 +5,7 @@ node default {
 
 #include selinux
 
-class { selinux:
+class { 'selinux':
   mode => 'permissive',
   type => 'targeted',
 }
