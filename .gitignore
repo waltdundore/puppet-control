@@ -12,6 +12,8 @@
 .env
 /.vagrant/
 /certs/
+commit.sh
+deploy.sh
 
 
 # Used by dotenv library to load environment variables.
