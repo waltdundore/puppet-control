@@ -23,7 +23,6 @@ sudo::conf { 'puppet_puppet':
   }
 
 sudo::conf { 'vagrant':
-    content  => 'Defaults:vagrant !requiretty',
     content  => 'vagrant ALL=(ALL) NOPASSWD: ALL',
   }
 
@@ -38,6 +37,8 @@ File {
 
 # ignore version control when recursively managing directories
 File { ignore => ['.svn', '.git', 'CVS' ] }
+
+
 
 # default options for mounts
 Mount {
