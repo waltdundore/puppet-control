@@ -14,6 +14,8 @@ dnf -y install git
 
 dnf -y install wget curl nano
 
+
+
 echo ########################################################
 echo #                 installing puppet agent              #
 echo ########################################################

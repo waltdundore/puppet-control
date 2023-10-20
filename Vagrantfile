@@ -39,11 +39,6 @@ Vagrant.configure(2) do |config|
         nfs_version: 4,
         nfs_udp: false
 
-    config.vm.synced_folder "./scratch", "/vagrant/scratch",
-        type: "nfs",
-        nfs_version: 4,
-        nfs_udp: false
-
     config.vm.synced_folder "r10k/", "/etc/puppetlabs/r10k/",
         type: "nfs",
         nfs_version: 4,
