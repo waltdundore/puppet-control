@@ -1,4 +1,5 @@
 :sources:
   :dundorenet:
-    remote: '/vagrant/scratch/puppet-control'
+    #remote: '/vagrant/scratch/puppet-control'
+    remote:  'git://https://github.com/waltdundore/puppet-control.git'
     basedir: '/etc/puppetlabs/code/environments'
