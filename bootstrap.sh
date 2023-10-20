@@ -40,6 +40,5 @@ chmod 0600 /root/.ssh/*
 /opt/puppetlabs/bin/puppet module install puppet-epel --version 5.0.0
 
 
-curl -o ~/site.pp https://raw.githubusercontent.com/waltdundore/puppet-control/production/manifests/site.pp
-/opt/puppetlabs/bin/puppet apply ~/site.pp
-rm -f ~/site.pp
+/usr/local/bin/r10k deploy environment production -pv && /opt/puppetlabs/bin/puppet apply --environment production /etc/puppetlabs/code/environments/production/manifests/site.pp
+
