@@ -39,6 +39,7 @@ chmod 0600 /root/.ssh/*
 /opt/puppetlabs/bin/puppet module install puppetlabs-docker --version 9.1.0
 /opt/puppetlabs/bin/puppet module install puppet-epel --version 5.0.0
 
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 /usr/local/bin/r10k deploy environment production -pv && /opt/puppetlabs/bin/puppet apply --environment production /etc/puppetlabs/code/environments/production/manifests/site.pp
 

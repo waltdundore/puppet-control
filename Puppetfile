@@ -5,6 +5,7 @@ mod 'saz/sudo', '8.0.0'
 mod 'puppet-selinux', '4.0.0'
 mod 'puppetlabs-docker', '9.1.0'
 mod 'puppet-epel', '5.0.0'
+mod 'puppetlabs-sshkeys_core', '2.4.0'
 
 
 mod 'profiles',
