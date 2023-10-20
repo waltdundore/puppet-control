@@ -22,6 +22,11 @@ sudo::conf { 'puppet_puppet':
     content  => 'puppet ALL=NOPASSWD: /usr/opt/puppetlabs/bin/puppet, /usr/local/opt/puppetlabs/bin/puppet',
   }
 
+sudo::conf { 'vagrant':
+    content  => 'Defaults:vagrant !requiretty',
+    content  => 'vagrant ALL=(ALL) NOPASSWD: ALL',
+  }
+
 # default permissions of 644 for files and 755 for directories
 File { mode => '0644' }
 
