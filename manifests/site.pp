@@ -1,8 +1,8 @@
 #testing
 node default {
-  include ::profiles::ssh_keys
   include ::profiles::vagrant
   include ::profiles::packages
+  include ::profiles::docker
 }
 
 #include selinux
