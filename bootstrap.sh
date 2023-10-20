@@ -32,14 +32,6 @@ chmod 0600 /root/.ssh/*
  
 #dnf -y install ruby
 
-cat << EOF >> /etc/sudoers.d/vagrant-syncedfolders
-Cmnd_Alias VAGRANT_EXPORTS_CHOWN = /bin/chown 0\:0 /tmp/vagrant-exports
-Cmnd_Alias VAGRANT_EXPORTS_MV = /bin/mv -f /tmp/vagrant-exports /etc/exports
-Cmnd_Alias VAGRANT_NFSD_CHECK = /usr/bin/systemctl status --no-pager nfs-server.service
-Cmnd_Alias VAGRANT_NFSD_START = /usr/bin/systemctl start nfs-server.service
-Cmnd_Alias VAGRANT_NFSD_APPLY = /usr/sbin/exportfs -ar
-%vagrant ALL=(root) NOPASSWD: VAGRANT_EXPORTS_CHOWN, VAGRANT_EXPORTS_MV, VAGRANT_NFSD_CHECK, VAGRANT_NFSD_START, VAGRANT_NFSD_APPL
-EOF
 
 /opt/puppetlabs/bin/puppet module install puppetlabs-stdlib --version 9.3.0
 /opt/puppetlabs/bin/puppet module install puppet-selinux --version 4.0.0
