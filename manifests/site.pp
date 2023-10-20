@@ -2,6 +2,7 @@
 node default {
   include ::profiles::vagrant
   include ::profiles::packages
+  include ::profiles::docker
   include ::profiles::docker_netbox
 }
 
