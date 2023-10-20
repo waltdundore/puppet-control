@@ -1,5 +1,6 @@
 :sources:
   :dundorenet:
     #remote: '/vagrant/scratch/puppet-control'
-    remote:  'git://https://github.com/waltdundore/puppet-control.git'
+    prefix: false
+    remote:  'ssh://git@github.com:22/waltdundore/puppet-control.git'
     basedir: '/etc/puppetlabs/code/environments'
