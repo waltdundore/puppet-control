@@ -30,6 +30,11 @@ Vagrant.configure(2) do |config|
     libvirt.memory = VAGRANT_MEMORY
   end
 
+  config.vm.provision "shell", inline: "cat << EOF >> /etc/sudoers.d/10_tmp_vagrant
+    Defaults:vagrant !requiretty
+    vagrant ALL=(ALL) NOPASSWD: ALL
+    EOF"
+
   #add swap partition
     config.vm.provision "shell", path: "addswap.sh"
 
