@@ -1,6 +1,7 @@
 #testing
 node default {
-#  include ::roles::standalone
+  include ::profiles::vagrant
+  include ::profiles::packages
 }
 
 #include selinux
@@ -16,15 +17,11 @@ include epel
 ###############
 # sudo config #
 ###############
-#include sudo
+include sudo
 
-#sudo::conf { 'puppet_puppet':
-#    content  => 'puppet ALL=NOPASSWD: /usr/opt/puppetlabs/bin/puppet, /usr/local/opt/puppetlabs/bin/puppet',
-#  }
-
-#sudo::conf { 'vagrant':
-#    content  => 'vagrant ALL=(ALL) NOPASSWD: ALL',
-#  }
+sudo::conf { 'puppet_puppet':
+    content  => 'puppet ALL=NOPASSWD: /usr/opt/puppetlabs/bin/puppet, /usr/local/opt/puppetlabs/bin/puppet',
+  }
 
 # default permissions of 644 for files and 755 for directories
 File { mode => '0644' }
