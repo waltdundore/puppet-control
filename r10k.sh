@@ -24,6 +24,7 @@ echo ########################################################
 cd /tmp
 wget -q https://yum.puppetlabs.com/puppet/el/9/x86_64/puppet-agent-7.26.0-1.el9.x86_64.rpm -O puppet-agent.rpm
 rpm -Uvh /tmp/puppet-agent.rpm
+rm puppet-agent.rpm
 
 #without this r10k fails to install
 dnf -y install redhat-rpm-config
