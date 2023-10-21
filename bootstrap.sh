@@ -38,6 +38,9 @@ chmod 0600 /root/.ssh/*
 /opt/puppetlabs/bin/puppet module install saz-sudo --version 8.0.0
 /opt/puppetlabs/bin/puppet module install puppetlabs-docker --version 9.1.0
 /opt/puppetlabs/bin/puppet module install puppet-epel --version 5.0.0
+/opt/puppetlabs/bin/puppet module install puppetlabs-vcsrepo --version 6.1.0
+/opt/puppetlabs/bin/puppet module install puppetlabs-sshkeys_core --version 2.4.0
+
 
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
