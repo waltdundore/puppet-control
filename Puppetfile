@@ -14,7 +14,7 @@ mod 'profiles',
   :default_branch => 'production'
 
 mod 'puppet-code',
-     :git    => 'git@github.com:waltdundore/puppet-control.git',
-     :branch => :control_branch,
-     :default_branch => 'production'
+  :git    => 'git@github.com:waltdundore/puppet-control.git',
+  :branch => :control_branch,
+  :default_branch => 'production'
 
